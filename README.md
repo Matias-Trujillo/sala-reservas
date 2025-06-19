@@ -1,0 +1,2 @@
+# sala-reservas
+Ejercicio Guiado
