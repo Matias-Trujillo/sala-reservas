@@ -11,7 +11,7 @@ jobs:
       - name: Configurar Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: '3.13'
 
       - name: Instalar dependencias
         run: |
@@ -20,6 +20,9 @@ jobs:
           pip install -r requirements.txt
 
       - name: Ejecutar pruebas
+        env:
+          PYTHONPATH: .
         run: |
           source venv/bin/activate
           pytest
+
